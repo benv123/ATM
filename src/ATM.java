@@ -4,7 +4,7 @@ public class ATM {
 	public ATM(){
 	}
 	public boolean deposit(String id,double deposit){
-		for(Account account:accounts) {
+		for(Account account:accounts){
 			if(account.id.equals(id)){
 				account.balance+=deposit;
 				return true;
@@ -12,5 +12,12 @@ public class ATM {
 		}
 		accounts.add(new Account(id,deposit));
 		return true;
+	}
+	public String toString(){
+		String str="";
+		for(Account account:accounts){
+			str+="ID: "+account.id+"; Balance: "+account.balance+"\n";
+		}
+		return str;
 	}
 }
