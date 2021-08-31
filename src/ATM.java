@@ -20,4 +20,17 @@ public class ATM {
 		}
 		return str;
 	}
+	public boolean withdraw(String id, double withdraw) {
+		for (Account account: accounts) {
+			if(account.id.equals(id)){
+				if (withdraw > account.getBalance()) {
+					throw new IllegalArgumentException("shrivel up, die, and dont talk to me again");
+				}
+				account.balance-=withdraw;
+				return true;
+			}
+		}
+		accounts.add(new Account(id, 0));
+		return false;
+	}
 }
