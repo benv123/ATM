@@ -1,7 +1,7 @@
 public class Account{
-	String id;
-	double balance;
-	public Account(String id,double balance){
+	private String id;
+	private long balance;
+	public Account(String id,long balance){
 		this.id=id;
 		this.balance=balance;
 	}
@@ -11,10 +11,10 @@ public class Account{
 	public void setId(String id) {
 		this.id = id;
 	}
-	public double getBalance() {
+	public long getBalance() {
 		return balance;
 	}
-	public void setBalance(double balance) {
+	public void setBalance(long balance) {
 		this.balance = balance;
 	}
 }
