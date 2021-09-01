@@ -34,6 +34,11 @@ public class ATM {
 		return false;
 	}
 	public long checkBalance(String accountID) { 
-		
+		for(Account account:accounts){
+			if (account.getId().equals(accountID)) {
+				return account.getBalance();
+			}
+		}
+		throw new IllegalArgumentException("you don't have an account because you're broke. what more can i say?");
 	}
 }
