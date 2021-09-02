@@ -7,5 +7,9 @@ public class AccountMain{
 		atm.deposit("c",300);
 		atm.deposit("b",1000);
 		System.out.println(atm);
+		atm.withdraw("a", 100);
+		System.out.println(atm);
+		atm.withdraw("a", 1000);
+		System.out.println(atm);
 	}
 }
